@@ -246,7 +246,7 @@ extension HomeViewController:UICollectionViewDelegate
         }
         else if collectionView == trandingCollectionView
         {
-            guard indexPath.row < tourData.count else {
+            guard indexPath.row < trandingLocationData.count else {
                 print(" Index out of range: \(indexPath.row), tourData count: \(tourData.count)")
                 return
             }
