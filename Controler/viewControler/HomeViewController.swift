@@ -211,15 +211,17 @@ extension HomeViewController:UICollectionViewDelegate
         {
             if let _previousCell = previouscell as? TagCollectionViewCell
             {
-                _previousCell.cellView.backgroundColor = .color1
-                _previousCell.name.textColor = .white
+                _previousCell.cellView.backgroundColor = .white
+                _previousCell.name.textColor = .color1
                 _previousCell.transform = .identity
             }
             
             let cell = collectionView.cellForItem(at: indexPath) as! TagCollectionViewCell
-            cell.cellView.backgroundColor = .gray
+           
+            cell.cellView.backgroundColor = .color1
             cell.name.textColor = .white
             cell.transform = CGAffineTransform(scaleX: 1.0, y: 1.1)
+          
             previouscell = cell
             
             let categoriseData = categoriesData[indexPath.row]
